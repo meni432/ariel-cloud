@@ -19,7 +19,7 @@ npm install express
 
 echo "const express = require('express');" > index.js
 echo "const app = express();" >> index.js
-echo "const PORT = 3000;" >> index.js
+echo "const PORT = 80;" >> index.js
 echo "app.all('*', (req, res) => {" >> index.js
 echo "    res.status(200).send('Basic HTTP Service: 200 OK');" >> index.js
 echo "});" >> index.js
