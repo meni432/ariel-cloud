@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Update the instance
+yum update -y
+
+# Install Node.js (using Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+nvm install node
+
+cd /home/ec2-user
+mkdir app
+cd app
+
+npm init -y
+npm install express
+
+echo "const express = require('express');" > index.js
+echo "const app = express();" >> index.js
+echo "const PORT = 3000;" >> index.js
+echo "app.all('*', (req, res) => {" >> index.js
+echo "    res.status(200).send('Basic HTTP Service: 200 OK');" >> index.js
+echo "});" >> index.js
+echo "app.listen(PORT, () => {" >> index.js
+echo "    console.log(\`HTTP service is running on http://localhost:${PORT}\`);" >> index.js
+echo "});" >> index.js
+
+node index.js
