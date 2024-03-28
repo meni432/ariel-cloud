@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Update the instance
+yum update -y
+
+# Install Node.js (using Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+nvm install node
+
+# install easy-echo as global dependency
+npm install -g easy-echo
+
+# run easy-echo on given port
+npx easy-echo --port=80
