@@ -6,9 +6,9 @@ const http = require('http');
 const httpAgent = new http.Agent({ keepAlive: true, maxSockets: Infinity });
 
 // Configuration
-const endpoint = 'http://webservice-prime-lb-991717161.us-east-1.elb.amazonaws.com'; // Set your endpoint URL here
-const requestCount = 100000000; // Total number of requests to send
-const concurrencyLevel = 100; // Number of concurrent requests, adjust based on system capacity
+const endpoint = 'http://ec2-3-88-24-134.compute-1.amazonaws.com/?num=35'; // Set your endpoint URL here
+const requestCount = 100; // Total number of requests to send
+const concurrencyLevel = 1; // Number of concurrent requests, adjust based on system capacity
 
 // Function to make an HTTP GET request
 const makeRequest = (done) => {
