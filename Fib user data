@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Update the instance
+yum update -y
+
+# Install Node.js (using Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+nvm install node
+
+cd /home/ec2-user
+mkdir app
+cd app
+
+npm init -y
+npm install express
+
+echo "
+const express = require('express');
+const app = express();
+
+function fibonacci(num) {
+  if (num <= 1) return num;
+  return fibonacci(num - 1) + fibonacci(num - 2);
+}
+
+app.get('/', (req, res) => {
+    let requestedNumber = 20;
+    if(req.query.num) {
+      requestedNumber = req.query.num;
+    }
+    const fibonacciResult = fibonacci(requestedNumber);
+    res.send('The number is ' + requestedNumber + '. fibonacci number ' + fibonacciResult);
+});
+
+app.listen(80, () => {
+  console.log('Server is running on http://localhost:80');
+}); " >> index.js
+
+node index.js
