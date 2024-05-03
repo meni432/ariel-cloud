@@ -1,0 +1,17 @@
+{
+  "name": "ariel-cloud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.5",
+    "axios": "^1.6.8",
+    "http": "^0.0.1-security"
+  }
+}
