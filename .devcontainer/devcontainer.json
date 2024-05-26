@@ -1,0 +1,16 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+  }
+  "customizations": {
+    "codespaces": {
+      "repositories": {
+        "meni432/hello-cdk-aws-lab": {
+          "permissions": {
+            "issues": "write"
+          }
+        }
+      }
+    }
+  }
+}
