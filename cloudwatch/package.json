@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch-logs": "^3.583.0"
+  },
+  "name": "cloudwatch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,17 @@
+{
+  "name": "presign",
+  "version": "1.0.0",
+  "main": "operation-demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.577.0",
+    "@aws-sdk/s3-request-presigner": "^3.577.0",
+    "express": "^4.19.2"
+  }
+}
