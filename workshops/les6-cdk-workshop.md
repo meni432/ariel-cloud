@@ -42,7 +42,7 @@ git remote remove origin
 ```
 
 ### Connect Github repo to you account
-Make sure that you update _<your-github-username>_ and _<your-new-repo>_
+Make sure that you update `<your-github-username>` and `<your-new-repo>`
 ```bash
 git remote add origin https://github.com/<your-github-username>/<your-new-repo>.git
 git push -u origin main
