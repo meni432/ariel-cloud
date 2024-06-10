@@ -52,6 +52,11 @@ git push -u origin main
 npm install -g aws-cdk
 ```
 
+### Install Package
+```bash
+npm install
+```
+
 ### Bootstrap your AWS Academy account
 - Update the AWS account information inside `/main/bin/hello-cdk.ts#L60`
 ```bash
