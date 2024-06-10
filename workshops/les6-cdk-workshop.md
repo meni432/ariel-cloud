@@ -47,15 +47,15 @@ Make sure that you update `<your-github-username>` and `<your-new-repo>`
 git remote add origin https://github.com/<your-github-username>/<your-new-repo>.git
 git push -u origin main
 ```
+### Install CDK
+```bash
+npm install -g aws-cdk
+```
 
 ### Bootstrap your AWS Academy account
 - Update the AWS account information inside `/main/bin/hello-cdk.ts#L60`
 ```bash
 cdk bootstrap --template bootstrap-template.yaml
-```
-### Install CDK
-```bash
-npm install -g aws-cdk
 ```
 
 ### Execute CDK Deploy
