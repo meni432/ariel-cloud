@@ -53,6 +53,10 @@ git push -u origin main
 ```bash
 cdk bootstrap --template bootstrap-template.yaml
 ```
+### Install CDK
+```bash
+npm install -g aws-cdk
+```
 
 ### Execute CDK Deploy
 ```bash
