@@ -3,7 +3,7 @@ const { DynamoDBClient, PutItemCommand } = require("@aws-sdk/client-dynamodb");
 // Configuration
 const REGION = "us-east-1"; // Replace with your AWS region
 const TABLE_NAME = "StockTable"; // Replace with your table name
-const ITEM_COUNT = 100; // Number of items to add
+const ITEM_COUNT = 10000; // Number of items to add
 
 // Initialize DynamoDB clientls
 
